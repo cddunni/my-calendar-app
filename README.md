@@ -17,13 +17,14 @@ A responsive and accessible calendar application that allows users to view and m
 ```bash
 git clone https://github.com/your-username/calendar-app.git
 cd calendar-app
-//Install Dependecies
+
+### 2. Install Dependencies
 npm install
 
-//Start the development server
+### 3. Start the development server
 npm run dev
 
-//Run tests
+### 4. Run tests
 npm run test
 ✅ The app uses Vite for faster build and hot module replacement.
 
