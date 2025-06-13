@@ -15,7 +15,7 @@ export default function CalendarGrid() {
   const ViewComponent = viewComponents[view] || MonthView;
 
   return (
-    <div className="mt-3">
+    <div className="mt-3 w-full">
       <ViewComponent />
     </div>
   );
