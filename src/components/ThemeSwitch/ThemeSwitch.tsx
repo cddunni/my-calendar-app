@@ -11,7 +11,7 @@ export default function ThemeSwitch() {
       aria-label="Toggle dark mode"
       title={isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
     >
-      {isDarkMode ? '🌙 Dark' : '☀️ Light'}
+      {isDarkMode ? <p className='flex'>🌙 <span className='md:hidden block ml-2'>Dark</span></p> : <p className='flex'>☀️ <span className='md:hidden block ml-1'>Light</span></p>}
     </button>
   );
 }

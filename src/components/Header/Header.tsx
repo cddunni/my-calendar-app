@@ -19,7 +19,7 @@ export default function Header({ openCreateModal }: HeaderModalProps) {
     useCalendarStore();
 
   return (
-    <header className="flex justify-between w-full" role="banner">
+    <header className="flex justify-between w-full md:flex-row flex-col md:space-y-0 space-y-2" role="banner">
       <div className="flex space-x-6 items-center">
         <button
           onClick={goToToday}
@@ -84,7 +84,7 @@ export default function Header({ openCreateModal }: HeaderModalProps) {
         </h2>
       </div>
 
-      <div className="flex items-center space-x-2">
+      <div className="items-center space-x-2 md:flex hidden">
         <Button
           className="inline-flex items-center gap-2 rounded-md dark:bg-[#37393c] text-[#1f1f1f] font-medium text-sm dark:text-[#e3e3e3] px-3.5 py-1.5 shadow-[0_3px_8px_rgba(0,0,0,0.24)] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           onClick={openCreateModal}
