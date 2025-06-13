@@ -6,7 +6,7 @@ jest.mock('../../store/eventStore', () => ({
   useEventStore: jest.fn()
 }));
 
-const mockedUseEventStore = useEventStore as jest.Mock;
+const mockedUseEventStore = useEventStore as unknown as jest.Mock
 
 describe('EventDetails', () => {
   const mockClearSelectedEvent = jest.fn();

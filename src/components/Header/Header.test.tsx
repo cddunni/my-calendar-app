@@ -19,7 +19,7 @@ describe("Header component", () => {
     jest.clearAllMocks();
 
     // Provide default mock implementation for useCalendarStore
-    (useCalendarStore as jest.Mock).mockReturnValue({
+    (useCalendarStore as unknown as jest.Mock).mockReturnValue({
       currentDate: new Date("2025-06-12"),
       view: "Month",
       setView: setViewMock,
