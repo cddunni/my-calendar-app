@@ -52,16 +52,63 @@ function App() {
               />
             </svg>
           </button>
-          <p className="font-medium text-2xl text-[#1f1f1f] dark:text-[#e3e3e3] lg:block hidden">
-            Calendar
-          </p>
+          <div className="lg:flex space-x-2 items-center hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="#4285F4"
+              width="48"
+              height="48"
+            >
+              <rect
+                x="3"
+                y="5"
+                width="18"
+                height="16"
+                rx="2"
+                ry="2"
+                fill="#4285F4"
+              />
+              <rect x="3" y="8" width="18" height="2" fill="#FFFFFF" />
+              <line
+                x1="7"
+                y1="2"
+                x2="7"
+                y2="6"
+                stroke="#4285F4"
+                stroke-width="2"
+              />
+              <line
+                x1="17"
+                y1="2"
+                x2="17"
+                y2="6"
+                stroke="#4285F4"
+                stroke-width="2"
+              />
+              <text
+                x="12"
+                y="15"
+                text-anchor="middle"
+                font-size="7"
+                fill="white"
+                font-family="Arial, sans-serif"
+                font-weight="bold"
+              >
+                31
+              </text>
+            </svg>
+            <p className="font-medium text-2xl text-[#1f1f1f] dark:text-[#e3e3e3] ">
+              Calendar
+            </p>
+          </div>
         </div>
         <Header openCreateModal={() => setOpen(true)} />
       </div>
       <main className="w-full lg:flex block">
         {showSideBar && (
           <div>
-               <div className=" items-center space-x-2 md:hidden flex">
+            <div className=" items-center space-x-2 md:hidden flex">
               <Button
                 className="inline-flex items-center gap-2 rounded-md dark:bg-[#37393c] text-[#1f1f1f] font-medium text-sm dark:text-[#e3e3e3] px-3.5 py-1.5 shadow-[0_3px_8px_rgba(0,0,0,0.24)] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 onClick={() => setOpen(true)}
@@ -135,7 +182,6 @@ function App() {
               mode="single"
               className="my-calendar lg:min-w-[250px]"
             />
-         
           </div>
         )}
         <CalendarGrid />
