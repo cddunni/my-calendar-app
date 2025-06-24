@@ -7,7 +7,7 @@ export const generateTimeOptions = (): TimeOption[] => {
   const options: TimeOption[] = [];
 
   for (let hour = 0; hour < 24; hour++) {
-    for (let min of [0, 15, 30, 45]) {
+    for (const min of [0, 15, 30, 45]) {
       const period = hour < 12 ? "AM" : "PM";
       const hour12 = hour % 12 === 0 ? 12 : hour % 12;
       const minuteStr = min.toString().padStart(2, "0");
