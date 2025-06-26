@@ -1,12 +1,10 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import CreateEventModal from "./CreateEvent";
 
-// Mock uuid
 jest.mock("uuid", () => ({
   v4: () => "mock-uuid",
 }));
 
-// Mock store
 const addEventMock = jest.fn();
 
 const store = {
@@ -17,7 +15,6 @@ jest.mock("../../store/eventStore.ts", () => ({
     useEventStore: Object.assign(() => store, {
       getState: () => store,
       setState: () => {},
-      subscribe: () => () => {},
     }),
   }));
 

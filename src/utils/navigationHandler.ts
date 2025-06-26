@@ -1,4 +1,3 @@
-// src/utils/navigationHandler.ts
 import { addDays, addMonths, addWeeks, startOfToday, subDays, subMonths, subWeeks } from 'date-fns'
 import type { ViewMode } from '../types'
 

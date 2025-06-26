@@ -2,7 +2,6 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import Header from "./Header";
 import { useCalendarStore } from "../../store";
 
-// Mock the store hook
 jest.mock("../../store", () => ({
   useCalendarStore: jest.fn(),
 }));
@@ -18,7 +17,6 @@ describe("Header component", () => {
   beforeEach(() => {
     jest.clearAllMocks();
 
-    // Provide default mock implementation for useCalendarStore
     (useCalendarStore as unknown as jest.Mock).mockReturnValue({
       currentDate: new Date("2025-06-12"),
       view: "Month",
@@ -32,17 +30,14 @@ describe("Header component", () => {
   it("renders correctly with current date and default view", () => {
     render(<Header openCreateModal={openCreateModalMock} />);
 
-    // Header and buttons
     expect(screen.getByRole("banner")).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /today/i })).toBeInTheDocument();
 
-    // Date heading with formatted month and year
+
     expect(screen.getByText("June 2025")).toBeInTheDocument();
 
-    // View button with default view text
     expect(screen.getByRole("button", { name: /select calendar view/i })).toHaveTextContent("Month");
 
-    // Create event button
     expect(screen.getByRole("button", { name: /create a new event/i })).toBeInTheDocument();
   });
 

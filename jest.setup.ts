@@ -7,8 +7,8 @@ beforeAll(() => {
         matches: false,
         media: query,
         onchange: null,
-        addListener: jest.fn(), // deprecated but sometimes used
-        removeListener: jest.fn(), // deprecated but sometimes used
+        addListener: jest.fn(),
+        removeListener: jest.fn(), 
         addEventListener: jest.fn(),
         removeEventListener: jest.fn(),
         dispatchEvent: jest.fn(),

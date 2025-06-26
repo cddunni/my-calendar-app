@@ -20,7 +20,6 @@ interface EventState {
   setSelectedEvent: (event: Event) => void; 
   updateEventTime: (id:string, event: Event) => void; 
   deleteEvent: (id:string) => void; 
-  
 }
 
 export const useEventStore = create<EventState>()(
