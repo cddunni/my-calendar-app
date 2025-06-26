@@ -19,6 +19,7 @@ interface EventState {
   clearSelectedEvent: () => void;
   setSelectedEvent: (event: Event) => void; 
   updateEventTime: (id:string, event: Event) => void; 
+  deleteEvent: (id:string) => void; 
   
 }
 
@@ -42,6 +43,12 @@ export const useEventStore = create<EventState>()(
           events: state.events.map((event) =>
             event.id === id ? { ...event, ...newTimes } : event
           ),
+        }));
+      },
+
+      deleteEvent: (id: string) => {
+        set((state) => ({
+          events: state.events.filter((event) => event.id !== id),
         }));
       },
       
